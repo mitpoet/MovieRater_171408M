@@ -104,12 +104,13 @@
         <CheckBox android:id="@+id/etChkbox2"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-
+                  android:layout_weight="0.6"
                   android:text="Violence "/>
 
         <CheckBox android:id="@+id/etChkbox3"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
+                  android:layout_weight="0.4"
                   android:text="Language used "/>
     </LinearLayout>
 
