@@ -96,26 +96,33 @@ class MainActivity : AppCompatActivity() {
             val etChkbox2 = findViewById(R.id.etChkbox2) as CheckBox
             val etChkbox3 = findViewById(R.id.etChkbox3) as CheckBox
             val etDate = findViewById(R.id.etDate) as EditText
+            var count:Int = 0
 
 
-            if (etName.getText().toString().trim().equals("")) {
-                etName.setError("Field empty")}
-            if (etDescription.getText().toString().trim().equals("")) {
-                etDescription.setError("Field empty")}
-            if (etDate.getText().toString().trim().equals("")) {
-                etDate.setError("Field empty")}
-                else{
+            if (etName.getText().toString().trim().isEmpty()) {
+                etName.setError("Field empty")
+            count += 1}
+            if (etDescription.getText().toString().trim().isEmpty()) {
+                etDescription.setError("Field empty")
+                count += 1}
+            if (etDate.getText().toString().trim().isEmpty()) {
+                etDate.setError("Field empty")
+                count += 1}
 
 
-                    Toast.makeText(
-                        this, "Title" + etName.text + "\n"
-                                + "Overview:" + etDescription.text + "\n" + "Release Date" + etDate.text + "\n"
-                                + "Language: " + etLanguage.text + "\n" +
-                                etGone1.text + "\n" + "Reason" + "\n" + etGone2.text + "\n"
-                                + etGone3.text + "\n"
-                        , Toast.LENGTH_LONG
-                    ).show()
-                }
+            if (count == 0){
+                Toast.makeText(
+                    this, "Title" + etName.text + "\n"
+                            + "Overview:" + etDescription.text + "\n" + "Release Date" + etDate.text + "\n"
+                            + "Language: " + etLanguage.text + "\n" +
+                            etGone1.text + "\n" + "Reason" + "\n" + etGone2.text + "\n"
+                            + etGone3.text + "\n"
+                    , Toast.LENGTH_LONG
+                ).show()
+
+            }
+
+
             }
         }
     }
