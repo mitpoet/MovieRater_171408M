@@ -113,9 +113,9 @@ class MainActivity : AppCompatActivity() {
             if (count == 0){
                 Toast.makeText(
                     this, "Title" + etName.text + "\n"
-                            + "Overview:" + etDescription.text + "\n" + "Release Date" + etDate.text + "\n"
-                            + "Language: " + etLanguage.text + "\n" +
-                            etGone1.text + "\n" + "Reason" + "\n" + etGone2.text + "\n"
+                            + "Overview = " + etDescription.text + "\n" + "Release Date = " + etDate.text + "\n"
+                            + "Language =  " + etLanguage.text + "\n" +
+                            etGone1.text + "\n" + "Reason: " + "\n" + etGone2.text + "\n"
                             + etGone3.text + "\n"
                     , Toast.LENGTH_LONG
                 ).show()
